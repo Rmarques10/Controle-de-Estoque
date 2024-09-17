@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ControleDeEstoque.Models.EstoqueItem>
+@{
+    ViewData["Title"] = "Estoque";
+}
+<h2 style="padding: 20px 0px 20px 0px; color: black;">Lista de Itens no Estoque</h2>
+
+<table class="table table-bordered rounded">
+    <thead>
+        <tr>
+            <th>Código Do Produto</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Valor Total</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CodigoProduto</td>
+                <td>@item.Nome</td>
+                <td>@item.Descricao</td>
+                <td>@item.Quantidade</td>
+                <td>@item.PrecoUnitario.ToString("C")</td>
+                <td>@item.CalcularValorTotal().ToString("C")</td>
+                <td>
+                    <a asp-action="Entrada" asp-route-id="@item.Id" class="btn btn-primary">Entrada</a>
+                    <a asp-action="Saida" asp-route-id="@item.Id" class="btn btn-danger">Saída</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Valor Total em Estoque: @ViewBag.ValorTotalEstoque.ToString("C")</h3>

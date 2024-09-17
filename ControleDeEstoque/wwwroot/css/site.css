@@ -1,0 +1,133 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* site.css */
+
+body {
+    background-color: #F299B9; /* Fundo preto */
+    color: black; /* Texto branco */
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #1e90ff; /* Links em azul claro */
+}
+
+    a:hover {
+        color: #ff4500; /* Cor dos links ao passar o mouse (laranja) */
+    }
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #fff; /* Texto da tabela em branco */
+    background-color: #333; /* Fundo da tabela cinza escuro */
+    border-collapse: collapse;
+    box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.77); /* Sombra da tabela */
+}
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        border: 1px solid #444; /* Borda cinza ainda mais escura */
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .table th {
+        background-color: #555; /* Cabe�alho da tabela em cinza mais claro */
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #222; /* Linhas �mpares da tabela em preto mais claro */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #444; /* Linhas da tabela ao passar o mouse */
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+h2 {
+    color: #fff; /* T�tulos em branco */
+    border-bottom: 2px solid #555; /* Linha inferior em cinza */
+    padding-bottom: 0.5rem;
+}
+
+button {
+    background-color: #444; /* Fundo do botao cinza escuro */
+    color: #fff; /* Texto do botao branco */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #555; /* Fundo do botao ao passar o mouse */
+    }
+
+
+.navbar-dark.bg-black {
+    background-color: #F24484 !important; /* Define a cor da navbar como preto */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #fff !important; /* Texto da marca e dos links em branco */
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #1e90ff !important; /* Texto dos links ao passar o mouse (azul claro) */
+    }
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Borda do icone do menu na cor branca */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.btn-nvproduto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white; /* Verde agradável */
+    color: black; /* Cor do texto */
+    text-decoration: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+    .btn-nvproduto:hover {
+        background-color: #45a049; /* Cor mais escura no hover */
+        color: white;
+    }
+
+    .btn-nvproduto:active {
+        background-color: #3e8e41; /* Cor quando o botão é clicado */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+        transform: translateY(2px); /* Efeito de "pressionado" */
+    }

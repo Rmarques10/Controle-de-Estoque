@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ControleDeEstoque.Models.EstoqueRelatorio>
+
+<h2 style="padding: 20px 0px 20px 0px; color: black;">Relatório de Operações de Estoque</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Tipo de Operação</th>
+            <th>Valor da Operação</th>
+            <th>Data</th>
+            <th>Colaborador</th>
+            <th>Status</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NomeItem</td>
+                <td>@item.Quantidade</td>
+                <td>@item.PrecoUnitario.ToString("C")</td>
+                <td>@item.TipoOperacao</td>
+                <td>@item.ValorTotalOperacao.ToString("C")</td>
+                <td>@item.DataOperacao.ToString("g")</td>
+                <td>@item.NomeColaborador</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Valor Total de Saídas: @ViewBag.ValorTotalSaida.ToString("C")</h3>
